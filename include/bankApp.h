@@ -7,7 +7,10 @@ class bankApp
     public:
         bankApp();
         virtual ~bankApp();
-
+        void withdraw();
+        void deposit();
+        void transfer();
+        void showInfo();
     protected:
 
     private:
