@@ -1,8 +1,8 @@
 #ifndef CHECKING_H
 #define CHECKING_H
+#include "Account.h"
 
-
-class Checking
+class Checking : Account
 {
     public:
         Checking();
