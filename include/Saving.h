@@ -4,6 +4,11 @@
 
 class Saving
 {
+    // list properities
+
+    // c tor
+
+    // list any methods
     public:
         Saving();
         virtual ~Saving();

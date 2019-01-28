@@ -4,6 +4,8 @@
 
 class IRate
 {
+    // write a method that returns base rate
+
     public:
         IRate();
         virtual ~IRate();

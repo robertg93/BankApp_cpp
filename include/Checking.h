@@ -1,11 +1,18 @@
 #ifndef CHECKING_H
 #define CHECKING_H
 #include "Account.h"
+#include <string>
 
 class Checking : Account
 {
+
+    // list properities
+
+    // c tor
+
+    // list any methods
     public:
-        Checking();
+        Checking(std::string name);
         virtual ~Checking();
 
     protected:

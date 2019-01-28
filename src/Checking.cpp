@@ -1,10 +1,11 @@
 #include "Checking.h"
+#include <iostream>
 
-Checking::Checking()
+Checking::Checking(std::string name )
 {
-    //ctor
+    std::cout << "checking " << std::endl;
+     std::cout << "Name: " << name;
 }
-
 Checking::~Checking()
 {
     //dtor

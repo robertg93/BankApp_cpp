@@ -1,8 +1,9 @@
 #include "Account.h"
+#include <iostream>
 
 Account::Account()
 {
-    //ctor
+    std::cout << "account";
 }
 
 Account::~Account()

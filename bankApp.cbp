@@ -34,9 +34,15 @@
 			<Add option="-Weverything" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="include/bankApp.h" />
+		<Unit filename="include/Account.h" />
+		<Unit filename="include/Checking.h" />
+		<Unit filename="include/IRate.h" />
+		<Unit filename="include/Saving.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/bankApp.cpp" />
+		<Unit filename="src/Account.cpp" />
+		<Unit filename="src/Checking.cpp" />
+		<Unit filename="src/IRate.cpp" />
+		<Unit filename="src/Saving.cpp" />
 		<Extensions>
 			<envvars />
 			<code_completion />
