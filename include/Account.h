@@ -1,26 +1,35 @@
 #ifndef ACCOUNT_H
 #define ACCOUNT_H
 #include "IRate.h"
+#include <string>
+#include <iostream>
+
+
 
 class Account
 {
-    // list common properities for savings and checkings accounts
+    private:
 
-    // c tor to set base properities and initialize the account
+        std::string name;
+        std::string sSN;
+        double balance;
+        double rate;
+        std::string setAccountNumber();
 
-    // list common methods
 
     public:
-        Account();
-        virtual ~Account();
 
-        unsigned int GetCounter() { return m_Counter; }
-        void SetCounter(unsigned int val) { m_Counter = val; }
+        Account(std::string name, std::string sSN, double initDeposit);
+        virtual ~Account();
+        static int index;
+        static bool srandFlag;
+
+        std::string    randomThreeDigitNum();
 
     protected:
-
+        std::string accountNumber;
     private:
-        unsigned int m_Counter;
+
 };
 
 #endif // ACCOUNT_H

@@ -1,10 +1,11 @@
 #include "Checking.h"
-#include <iostream>
 
-Checking::Checking(std::string name )
+
+Checking::Checking(std::string name, std::string sSN, double initDeposit ): Account(name,sSN,initDeposit)
 {
-    std::cout << "checking " << std::endl;
-     std::cout << "Name: " << name;
+    accountNumber = accountNumber + "2";
+    std::cout << "acc num: " << accountNumber << std::endl;
+
 }
 Checking::~Checking()
 {

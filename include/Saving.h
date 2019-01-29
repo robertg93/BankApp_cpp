@@ -1,16 +1,18 @@
 #ifndef SAVING_H
 #define SAVING_H
 #include "Account.h"
+#include <iostream>
 
-class Saving
+class Saving: public Account
 {
     // list properities
-
+    int safetyDepositBoxID;
+    int safetyDepositBoxKey;
     // c tor
 
     // list any methods
     public:
-        Saving();
+        Saving(std::string name, std::string sSN, double initDeposit);
         virtual ~Saving();
 
     protected:
