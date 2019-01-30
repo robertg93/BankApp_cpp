@@ -5,19 +5,21 @@
 
 class Saving: public Account
 {
-    // list properities
-    int safetyDepositBoxID;
-    int safetyDepositBoxKey;
-    // c tor
+    private:
+        int safetyDepositBoxID;
+        int safetyDepositBoxKey;
 
-    // list any methods
     public:
         Saving(std::string name, std::string sSN, double initDeposit);
         virtual ~Saving();
 
+        void showInfo();
+        void setSafetyDepositBox();
+        void setRate() override;
+
     protected:
 
-    private:
+
 };
 
 #endif // SAVING_H

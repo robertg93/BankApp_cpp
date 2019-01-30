@@ -9,6 +9,7 @@ class IRate
     public:
         IRate();
         virtual ~IRate();
+        double getBaseRate();
 
     protected:
 

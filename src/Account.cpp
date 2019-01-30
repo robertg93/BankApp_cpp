@@ -1,6 +1,7 @@
 #include "Account.h"
 
 #include <iostream>
+#include <iomanip>
 
 
 int Account::index = 10000;
@@ -12,22 +13,23 @@ Account::Account(std::string name, std::string sSN, double initDeposit)
     this->name=name;
     this->sSN=sSN;
     balance=initDeposit;
-    std::cout << "Name: " << this->name << "\n sSN: " << this->sSN << "\n balance: " << balance << std::endl;
     index++;
     this->accountNumber = setAccountNumber();
-
-
-
 }
 
-std::string    Account::randomThreeDigitNum()
+Account::~Account()
+{
+    //dtor
+}
+
+std::string    Account::randomNum(int length)
 {
     if (srandFlag == false )
     {
         srand(time(0));
        srandFlag = true;
     }
-    const int length=3;
+
     std::string setPassword = "0123456789";
     std::string pass="";
 
@@ -49,12 +51,69 @@ std::string Account::setAccountNumber()
 {
     std::string lastTwoOfSSN = this->sSN.substr(sSN.size()-1) + this->sSN.substr(sSN.size()-2,1);
     int uniqueID = index;
-    return lastTwoOfSSN + std::to_string(uniqueID) + randomThreeDigitNum();
+    const int randomThreeDigit = 3;
+    return lastTwoOfSSN + std::to_string(uniqueID) + randomNum(randomThreeDigit);
 }
 
 
 
-Account::~Account()
+
+
+void Account::showInfo()
 {
-    //dtor
+    std::cout << "NAME: "<< std::setw(15) <<name <<
+                "\nACCOUNT NUMBER: " << accountNumber <<
+                "\nBALANCE: " << balance <<
+                "\nRATE: " << rate << "%"<< std::endl;
+
 }
+
+
+void Account::withdraw(double amount)
+{
+     balance = balance + amount;
+     std::cout << "withdrawing % " << amount << std::endl;
+     showBalance();
+}
+void Account::deposit(double amount )
+{
+    balance = balance + amount;
+    std::cout << "depostiting %" << amount << std::endl;
+    showBalance();
+}
+void Account::transfer(std::string toWhere, double amount)
+{
+    balance = balance - amount;
+    std::cout << "Transfering " << amount << "to " << toWhere << std::endl;
+    showBalance();
+}
+void Account::showBalance()
+{
+    std::cout << "Your balance is : " << balance << std::endl;
+}
+
+void Account::compound()
+{
+    double accuredInterests = balance * (rate/100);
+    balance = balance * accuredInterests;
+     std::cout << "Your accured Interests is : " << accuredInterests << std::endl;
+     showBalance();
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -9,3 +9,9 @@ IRate::~IRate()
 {
     //dtor
 }
+
+double IRate::getBaseRate()
+{
+
+    return 2.5;
+}

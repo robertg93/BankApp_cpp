@@ -3,17 +3,17 @@
 #include "IRate.h"
 #include <string>
 #include <iostream>
+#include <cmath>
 
 
-
-class Account
+class Account: public IRate
 {
     private:
 
         std::string name;
         std::string sSN;
         double balance;
-        double rate;
+
         std::string setAccountNumber();
 
 
@@ -23,13 +23,51 @@ class Account
         virtual ~Account();
         static int index;
         static bool srandFlag;
+        virtual void setRate()=0;
 
-        std::string    randomThreeDigitNum();
+        //methods
+        std::string    randomNum(int length);
+        void showInfo();
+        void showBalance();
+        void withdraw(double amount);
+        void deposit(double amount);
+        void transfer(std::string toWhere, double amount);
+        void compound();
+
 
     protected:
         std::string accountNumber;
-    private:
+        double rate;
+
+
+
 
 };
 
 #endif // ACCOUNT_H
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

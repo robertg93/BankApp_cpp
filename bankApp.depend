@@ -1,38 +1,50 @@
 # depslib dependency file v1.0
-1548784024 source:/home/robert/c++/bankApp/main.cpp
+1548863570 source:/home/robert/c++/bankApp/main.cpp
 	<iostream>
 	"Checking.h"
 	"Account.h"
 	"Saving.h"
 	"IRate.h"
+	"CSV.h"
 
-1548787541 source:/home/robert/c++/bankApp/src/Account.cpp
+1548851771 source:/home/robert/c++/bankApp/src/Account.cpp
 	"Account.h"
 	<iostream>
+	<iomanip>
 
-1548787591 /home/robert/c++/bankApp/include/Account.h
+1548851563 /home/robert/c++/bankApp/include/Account.h
 	"IRate.h"
 	<string>
 	<iostream>
+	<cmath>
 
-1548763994 source:/home/robert/c++/bankApp/src/Checking.cpp
+1548849120 source:/home/robert/c++/bankApp/src/Checking.cpp
 	"Checking.h"
-	<iostream>
 
-1548787591 /home/robert/c++/bankApp/include/Checking.h
+1548847747 /home/robert/c++/bankApp/include/Checking.h
 	"Account.h"
 	<string>
 	<iostream>
 
-1548102138 source:/home/robert/c++/bankApp/src/IRate.cpp
+1548848450 source:/home/robert/c++/bankApp/src/IRate.cpp
 	"IRate.h"
 
-1548703815 /home/robert/c++/bankApp/include/IRate.h
+1548846142 /home/robert/c++/bankApp/include/IRate.h
 
-1548763994 source:/home/robert/c++/bankApp/src/Saving.cpp
+1548848469 source:/home/robert/c++/bankApp/src/Saving.cpp
 	"Saving.h"
 
-1548787591 /home/robert/c++/bankApp/include/Saving.h
+1548847747 /home/robert/c++/bankApp/include/Saving.h
 	"Account.h"
 	<iostream>
+
+1548863301 source:/home/robert/c++/bankApp/src/CSV.cpp
+	"CSV.h"
+
+1548863301 /home/robert/c++/bankApp/include/CSV.h
+	<iostream>
+	<fstream>
+	<vector>
+	<sstream>
+	<list>
 

@@ -4,23 +4,51 @@
 #include <string>
 #include <iostream>
 
-class Checking : Account
+class Checking : public Account
 {
+    private:
 
-    // list properities
-    int debitCardNumber;
-    int debitCardPin;
+        std::string debitCardNumber;
+        int debitCardPin;
+        void setDebitCard();
 
-    // c tor
 
-    // list any methods
     public:
         Checking(std::string name, std::string sSN, double initDeposit);
         virtual ~Checking();
 
+        void showInfo();
+        void setRate() override;
+
+
     protected:
 
-    private:
+
 };
 
 #endif // CHECKING_H
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
